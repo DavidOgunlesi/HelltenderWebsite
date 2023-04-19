@@ -3,6 +3,7 @@ body{
     background-color: #C62424;
     overflow-x: hidden;
     margin: 0;
+    font-family: "ＭＳ Ｐゴシック";
 }
 main{
     width: 100%;
@@ -63,7 +64,7 @@ main{
 
 .content{
     padding: 0;
-    background-color: #C62424;
+    background: linear-gradient(#C62424, #2F0303);
     padding: 20px 100px;
     overflow-x: hidden;
 }
@@ -74,7 +75,6 @@ img {
   }
 
 .caption{
-    font-family: "ＭＳ Ｐゴシック";
     /* font-family: 'Source Serif Pro'; */
     font-size: 22px;
     border: 0;
@@ -99,6 +99,91 @@ img {
 .double-bold{
  font-weight: 900 !important;
 }
+.main-section{
+  padding: 0 200px;
+}
+.main-section b{
+    color: rgb(242, 179, 200);
+}
+
+.two-row-colum-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    gap: 40px;
+    width: 100%;
+    color: white;
+}
+.text-column{
+  flex-grow: 1;
+  font-size: larger;
+  width: 25%;
+  color: white;
+}
+
+.full-text-column{
+  flex-grow: 1;
+  font-size: larger;
+  color: white;
+}
+
+.column-title{
+    font-size: xx-large;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: white;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background: #facccc;
+}
+
+
+form{
+  width: 100%;
+}
+  
+form input{
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      border-radius: 10px;
+      height: fit-content;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      font-size: 1.3rem;
+      width: 100%;
+  }
+
+form  input.hidden-submit-button{
+      flex-grow: 0;
+      opacity: 0;
+      width: 0px;
+      transition: all 1.3s ease-in-out;
+  }
+form input.submit-button{
+      flex-grow: 1;
+      opacity: 1;
+      width: 100%;
+      transition: all 1.3s ease-in-out;
+      /* transition: width opacity 1.3s ease-in-out; */
+  }
+
+  form input.submit-button:hover{
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(224, 126, 126, 0.62);
+    translate: 0px -2.5px;
+}
+form input.submit-button:active{
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(224, 126, 126, 0.62);
+    translate: 0px 2.5px;
+}
+
 
 /* 
 SCROLLBAR
