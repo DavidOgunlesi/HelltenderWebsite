@@ -15,10 +15,11 @@
     <main>
         <div class="top-bar-graphic"> 
             <div class="logo">
-                <img class="logo-img fade-in-down" src="images/game-logo.png" >
+                <img id="logo" class="logo-img" src="images/game-logo.png" onclick="logoFall()" >
             </div>
             <img class="background-bar-img" src="images/bar-background.png" >
             <img class="table" src="images/table.png">
+            <!-- <img class="character" src="images/characters/Larathiel aka Larry.png"> -->
         </div>
         <div class="content">
             <div class="caption">
@@ -51,6 +52,7 @@
             <div class="two-row-colum-holder">
                 <div class="text-column">
                     <h2 class="column-title">About</h2>
+                    <p>In short, it's a gameplay focused, visual novel game about running a bar in hell. In long...</p>
                     <p>A new satan has been elected! With that comes many changes to hell. You, a former bartender, now a lesser demon in hell, have been summoned by satan himself to explore a new business venture. <b>A bar in hell.</b></p>
 
                     <p>With a host of deranged and unpredictable clients, it's up to you to mix drinks, handle conversations, and keep the bar running smoothly.</p>
@@ -66,7 +68,7 @@
                     <h2 class="column-title">Features</h2>
                     <p><b>Unique cocktail mixing system</b> where you physically grab and pour drinks, add extras, shake, and serve.</p>
 
-                    <p>A branching storyline where your decisions depending on what you say and what you serve.</p>
+                    <p><b>Choiced-based</b> branching storyline where your decisions depending on what you say and what you serve.</p>
 
                     <p>A host of <b>26 regular customers with intriguing backstories and world views.</b> Everyone has an opinion on hell!</p>
 
@@ -84,15 +86,14 @@
         <section  class="main-section">
             <div class="two-row-colum-holder">
             <div class="text-column">
-                <h2 class="column-title">Join the Mailing List to get the Free Demo</h2>
-                <p> </p>
+                <h2 class="column-title">Join the Mailing List to get gifts! Everyone likes gifts!</h2>
+                <img src="images/mailing_list_rewards.png" alt="mailing_list_rewards" width="100%">
                 <form onsubmit="">
-                    <div className="inputs">
                         <input type="email" placeholder="Your Email"></input> 
-                        <input class="submit-button" type='submit' value='Sign me up!'></input>
-                    </div>
+                        <input class="submit-button" type='submit' value='I want to recieve cool updates!'></input>
                     <p> 
-                        Join our mailing list to get updates on the game's progress! You'll be the first to know when the game is released!
+                        Join our mailing list to get updates on the game's progress! You'll be the first to know when the game is released. 
+                        And first to snatch up the best waifus! I mean release week discounts! 
                     </p>
                 </form>
             </div>
@@ -101,9 +102,31 @@
                         It's a free demo, so you have nothing to lose! It's a great way to get a feel for the game, and to see if it's something you'd like to support. It's really important that I get feedback from you players, so I can make the game as good as possible! It's only me here working on this game, so I really need your help!
                     </p>
                     <p> 
-                        If the demo is not enough for you, here's a free cat, maybe this will convince you to sign up!
+                        If the gifts are not enough for you, here's a free cat, maybe this will convince you to sign up!
                     </p>
                     <img src="images/cat.png" alt="cat" width="150" height="150">
+                    <h2 class="column-title">Support Me! <span class="lennyface">(╯°□°）╯︵ ┻━┻</span></h2>
+                    <p><b>Join and donate £1</b> to get your name with a special banner the credits and a funny message.</p>
+                    <p><b>Join and donate £5</b> Get a special character drawn in the credits group photo.</p>
+                    <p><b>Join and donate £10</b> to immortalise yourself as a demon OC of your creation, and also <b>get the game for free on launch.</b></p>
+                    <div id="donate-button-container">
+                        <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                        PayPal.Donation.Button({
+                        env:'production',
+                        hosted_button_id:'NPCRRCLS4KFBN',
+                        image: {
+                        src:'https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif',
+                        alt:'Donate with PayPal button',
+                        title:'PayPal - The safer, easier way to pay online!',
+                        }
+                        }).render('#donate-button');
+                        </script>
+                    </div>
+                        
+                        
+                    <p> </p>
             </div>
         </div>
         </section>
