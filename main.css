@@ -131,7 +131,21 @@ img {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-  }
+}
+
+#donate-button img{
+  width: 50%;
+}
+
+#donate-button img:hover{
+  animation: bounce2 2s ease infinite;
+}
+
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-15px);}
+	60% {transform: translateY(-7px);}
+}
 
 .caption{
     /* font-family: 'Source Serif Pro'; */
@@ -234,10 +248,16 @@ form input.submit-button{
       opacity: 1;
       width: 100%;
       transition: all 1.3s ease-in-out;
+      transform: scaleY(1);
       /* transition: width opacity 1.3s ease-in-out; */
-  }
+}
 
-  form input.submit-button:hover{
+form input.hidden{
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+form input.submit-button:hover{
     transition: all 0.3s ease-in-out;
     background-color: rgba(224, 126, 126, 0.62);
     translate: 0px -2.5px;

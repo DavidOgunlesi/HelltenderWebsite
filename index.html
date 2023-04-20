@@ -7,9 +7,17 @@
     <title>My Website</title>
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./carousel/carousel.css">
+    <link rel="stylesheet" href="./mailerlite/style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '409828');
+    </script>
   </head>
   <body>
     <main>
@@ -89,12 +97,13 @@
                 <h2 class="column-title">Join the Mailing List to get gifts! Everyone likes gifts!</h2>
                 <img src="images/mailing_list_rewards.png" alt="mailing_list_rewards" width="100%">
                 <form onsubmit="">
-                        <input type="email" placeholder="Your Email"></input> 
-                        <input class="submit-button" type='submit' value='I want to recieve cool updates!'></input>
-                    <p> 
+                        <!-- <input type="email" id="email-input" placeholder="Enter your Email"></input> 
+                        <input class="submit-button hidden" id="email-submit" type='submit' value='I want to recieve cool updates!'></input> -->
+                        <div class="ml-embedded" data-form="GwEZx5"></div>
+                    <!-- <p> 
                         Join our mailing list to get updates on the game's progress! You'll be the first to know when the game is released. 
                         And first to snatch up the best waifus! I mean release week discounts! 
-                    </p>
+                    </p> -->
                 </form>
             </div>
             <div class="text-column">
@@ -113,15 +122,15 @@
                         <div id="donate-button"></div>
                         <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
                         <script>
-                        PayPal.Donation.Button({
-                        env:'production',
-                        hosted_button_id:'NPCRRCLS4KFBN',
-                        image: {
-                        src:'https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif',
-                        alt:'Donate with PayPal button',
-                        title:'PayPal - The safer, easier way to pay online!',
-                        }
-                        }).render('#donate-button');
+                            PayPal.Donation.Button({
+                            env:'production',
+                            hosted_button_id:'NPCRRCLS4KFBN',
+                            image: {
+                            src:'images/donate.png',
+                            alt:'Donate with PayPal button',
+                            title:'PayPal - The safer, easier way to pay online!',
+                            }
+                            }).render('#donate-button');
                         </script>
                     </div>
                         

@@ -65,6 +65,25 @@ function logoFall() {
     var element = document.getElementById('logo');
     element.classList.add('hinge');
 }
-// var element = document.getElementById('logo');
-// element.addEventListener('click', () => element.style.classList.add('hinge')); 
 
+const validateEmail = (email) => typeof email === "string" && 
+                      email.includes("@") && 
+                      email.includes(".") && 
+                      email.length > 5 && 
+                      email.length < 50 &&
+                      email.indexOf("@") < email.lastIndexOf(".")
+                      && email.indexOf("@") > 0
+                      && email.lastIndexOf(".") < email.length - 1
+                      && email.lastIndexOf(".") > email.indexOf("@") + 1
+                      && email.indexOf("@") === email.lastIndexOf("@");
+
+const inputElement = document.getElementById("email-input"); // replace "myInput" with the ID of your input element
+inputElement.addEventListener("input", function() {
+    const email = this.value;
+    const isValid = validateEmail(email);
+    if (isValid) {
+        document.getElementById("email-submit").classList.remove("hidden");
+    } else {
+        document.getElementById("email-submit").classList.add("hidden");
+    }
+});
