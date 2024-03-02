@@ -7,23 +7,23 @@ if ('content' in document.createElement('template')) {
     const template = document.querySelector('#carousel__template');
 
     const gallery = [
-        { caption: "", image: "./gallery/wet_table.gif"},
-        { caption: "", image: "./gallery/bostonshaker.gif"},
-        { caption: "", image: "./gallery/characters.png"},
-        { caption: "", image: "./gallery/characters2.png"},
-        { caption: "", image: "./gallery/cups4.gif"},
-        { caption: "", image: "./gallery/cups6.gif"},
-        { caption: "", image: "./gallery/options.png"},
-        { caption: "", image: "./gallery/recipe_book.gif"},
-        { caption: "", image: "./gallery/wet_table.gif"},
-        { caption: "", image: "./gallery/wine.gif"},
+        { caption: "", video: "./gallery/helltenderScreenAnim.webm"},
+        { caption: "", video: "./gallery/dooropenbetter.webm"},
+        { caption: "", video: "./gallery/glassPickupSmooth.webm"},
+        { caption: "", video: "./gallery/helltenderVaccum.webm"},
+        { caption: "", video: "./gallery/helltenderScreenAnim.webm"},
+        { caption: "", video: "./gallery/helltenderScreenAnim.webm"},
+        { caption: "", video: "./gallery/helltenderScreenAnim.webm"},
+        { caption: "", video: "./gallery/helltenderScreenAnim.webm"},
+        { caption: "", video: "./gallery/helltenderScreenAnim.webm"},
+        { caption: "", video: "./gallery/helltenderScreenAnim.webm"},
     ];
 
     for (let i = 0; i < gallery.length; i++) {
         // Clone the new row and insert it into the table
         const clone = template.content.cloneNode(true);
-        let img = clone.querySelector("img");
-        img.src = gallery[i].image;
+        let img = clone.querySelector("video");
+        img.src = gallery[i].video;
         let caption = clone.querySelector(".slide__title");
         caption.textContent = gallery[i].caption;
 

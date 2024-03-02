@@ -6,6 +6,9 @@
         --height: calc( 40vh - 50px);
     }
     
+    @media (max-width: 600px){
+        -width: 100px;
+    }
 }
 
 .carousel {
@@ -14,7 +17,7 @@
     overflow: hidden;
 
     @media (max-width: 600px){
-        scale: 2;
+        display: none;
     }
 }
 
@@ -22,8 +25,16 @@
     display: flex;
     overflow: hidden;
     list-style: none;
+
+    
+
     padding: 2em 0 3em;
     margin: -2em 0 -3em;
+    
+    @media (max-width: 600px){
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 .carousel__item {
@@ -31,6 +42,7 @@
     position: relative;
     align-content: start;
     margin: 0 10px;
+
     padding: 0;
     flex: 1 1 10%;
     height: var(--height);
@@ -39,6 +51,12 @@
     border-radius: 16px;
     transform: translate3d(0,0,0.1px);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 15px 2px, rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+    @media (max-width: 600px){
+        margin: 10 0px;
+        flex: 1 1 50%;
+    }
+
 }
 
 .carousel__item::before {
@@ -67,6 +85,10 @@
 .carousel__item[data-active] {
     flex-basis: var(--width);
     flex-grow: 0;
+
+    video{
+        object-fit: contain;
+    }
 }
 
 .carousel__item:nth-child(3),
@@ -78,10 +100,18 @@
 .carousel__item:nth-child(11) {
     flex: 0 0 5px;
     transform: translateX(-50px);
+
+    @media (max-width: 600px){
+        transform: translateX(0px);
+    }
 }
 
 .carousel__item:nth-child(11) {
     transform: translateX(50px);
+
+    @media (max-width: 600px){
+        transform: translateX(0px) translateY(50px);
+    }
 }
 
 .carousel__item:nth-child( 1 ),
@@ -92,8 +122,8 @@
     opacity: 0!important;
 }
 
-.carousel__item:not(:nth-child( n + 5 )) img,
-.carousel__item:nth-child( n + 9 ) img {
+.carousel__item:not(:nth-child( n + 5 )) video,
+.carousel__item:nth-child( n + 9 ) video {
     opacity: 0.8;
 }
 
@@ -106,9 +136,10 @@
 [data-active] * {
     opacity: 1!important;
     filter: none!important;
+    
 }
 
-.carousel__item img {
+.carousel__item video {
     display: block;
     position: absolute;
     width: var(--width);
@@ -120,6 +151,10 @@
     aspect-ratio: 2/3;
     object-fit: contain;
     filter: saturate(0.2) contrast(0.75) brightness(1.1);
+
+    @media (max-width: 600px){
+        object-fit: cover;
+    }
 }
 
 .carousel__item::after {
@@ -152,6 +187,12 @@
     z-index: 1;
     transition-duration: 1s;
     opacity: 0;
+
+    @media (max-width: 600px){
+        min-width: auto;
+        min-height: 20px;
+    }
+    
 }
 [data-active] .carousel__contents {
     transform: translateX(0px); 

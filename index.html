@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
+    <title>Helltender</title>
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./carousel/carousel.css">
+    <link rel="stylesheet" href="./carousel-vertical/carousel-vertical.css">
     <link rel="stylesheet" href="./mailerlite/style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -16,7 +17,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
 
-
+    <meta name="title" content="Helltender">
+    <meta name="description" content="Helltender: a visual novel set in hell, run demon bar, mix drinks, shape story with choices. Inspired by VA-11-HALL-A, Papers Please.">
+    <meta name="keywords" content="Hell, Bartender, Demon, Bar, Visual novel, Cocktail, Choices, Storyline, Customers, Backstories, Gameplay, Interactions, Decision-making, Aesthetic, Satanic, Drinks, Conversations, Branching, Experience, Unique, Video Game, VA11HALL-A, Valhalla, Papers please, bartending, waifus">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="10 days">
+    <meta name="author" content="David Ogunlesi">
+    
     <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
         .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -57,7 +66,8 @@
                     <template id="carousel__template">
                         <li class="carousel__item">
                             <div class="carousel__image">
-                                <img src="" width=480 height=720>
+                                <!-- <img src="" width=480 height=720> -->
+                                <video src="" autoplay type="video/webm" muted></video>
                             </div>
                             <div class="carousel__contents">
                                 <h2 class="slide__title"></h2>
@@ -65,35 +75,119 @@
                         </li>
                     </template>
                 </ul>
+            </section>
+
+            <section class="main-section"> 
+                <div class="two-row-colum-holder">
+                    <div class="text-column">
+                        <h2 class="column-title">About</h2>
+                        <p>In short, it's a gameplay focused, visual novel game about running a bar in hell. In long...</p>
+                        <p>A new satan has been elected! With that comes many changes to hell. You, a former bartender, now a lesser demon in hell, have been summoned by satan himself to explore a new business venture. <b>A bar in hell.</b></p>
+    
+                        <p>With a host of deranged and unpredictable clients, it's up to you to mix drinks, handle conversations, and keep the bar running smoothly.</p>
+    
+                        <p><b><em>But it isn’t all about drinks...</em></b></p>
+    
+                        <p>Hell has problems to solve, poeple to save....</p>
+    
+                        <p>...and the doors to <em>The Ninth Circle</em> have swung wide, inviting all those who are willing to drink their problems away, at your service. <b><em>There's no telling who will wander in seeking to drown their sorrows in booze.</em></b></p>
+    
+                    </div>
+                    <div class="text-column">
+                        <h2 class="column-title">Features</h2>
+                        <p><b>Unique cocktail mixing system</b> where you physically grab and pour drinks, add extras, shake, and serve.</p>
+    
+                        <p><b>Choiced-based</b> branching storyline where your decisions depending on what you say and what you serve.</p>
+    
+                        <p>A host of <b>26 regular customers with intriguing backstories and world views.</b> Everyone has an opinion on hell!</p>
+    
+                         <p>An aesthetic inspired by <em>Helltaker</em>, a story influenced by <em>VA-11-HALL-A</em>, and gameplay drawn from <em>Papers Please.</em> </p>
+    
+                        <p>A beautiful soundtrack... I hope!</p>
+    
+                        <p><b>Serious waifu potential ;)</b></p>
+    
+                        <p>Get close with your clients, their tastes, their dreams; and prepare for one hell of a good time!</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr/>
+            <section  class="main-section">
+                <div class="two-row-colum-holder">
+                <div class="text-column">
+                    <h2 class="column-title">Join the Mailing List to get gifts! Everyone likes gifts!</h2>
+                    <img src="images/mailing_list_rewards.png" alt="mailing_list_rewards" width="100%">
+                    <form onsubmit="">
+                            <div class="ml-embedded" data-form="GwEZx5"></div>
+                    </form>
+                </div>
+                <div class="text-column">
+                        <p> 
+                            It's a free demo, so you have nothing to lose! It's a great way to get a feel for the game, and to see if it's something you'd like to support. It's really important that I get feedback from you players, so I can make the game as good as possible! It's only me here working on this game, so I really need your help!
+                        </p>
+                        <p> 
+                            If the gifts are not enough for you, here's a free cat, maybe this will convince you to sign up!
+                        </p>
+                        <img src="images/cat.png" alt="cat" width="150" height="150">
+                        <h2 class="column-title">Support Me! <span class="lennyface">(╯°□°）╯︵ ┻━┻</span></h2>
+                        <p><b>Join and donate £1</b> to get your name with a special banner the credits and a funny message.</p>
+                        <p><b>Join and donate £5</b> Get a special character drawn in the credits group photo.</p>
+                        <p><b>Join and donate £10</b> to immortalise yourself as a demon OC of your creation, and also <b>get the game for free on launch.</b></p>
+                        <div id="donate-button-container">
+                            <div id="donate-button"></div>
+                            <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                            <script>
+                                PayPal.Donation.Button({
+                                env:'production',
+                                hosted_button_id:'NPCRRCLS4KFBN',
+                                image: {
+                                src:'images/donate.png',
+                                alt:'Donate with PayPal button',
+                                title:'PayPal - The safer, easier way to pay online!',
+                                }
+                                }).render('#donate-button');
+                            </script>
+                        </div>
+                            
+                            
+                        <p> </p>
+                </div>
+            </div>
+            </section>
+            <hr/>
+            <section  class="main-section">
+                <div class="two-row-colum-holder">
+                    <div class="text-column">
+                        <h2 class="column-title">Developer Message</h2>
+                        <p>Our team... is non existent! It's just me! A solo dev, making this game :P. I am currently studying Computer Science at Exeter University, and since it's my dream to become a successful indie game developer, I figured it was about time I released a game. </p>
+                        <p> I started making games since I was a wee-little 14 year old. They are all crap, understandably. But nowadays, I seem to be able to make slightly less crap games ;P. In all seriousness, it's pretty surreal seeing myself today. If I told myself back then that I would be making a website for one of my games, I would have probably had a heart attack, because time travel is not a normal daily oocurence and my weak 14 year old heart probably couldn't take that.</p>
+                        <p> I've been working on this game for about a year now, and I'm really excited to finally release it! I hope you enjoy it! If you want to support any of my future games, follow me on twitter! I still don't get how it works but we can figure that out later...</p>
+                    
+                        <h2 class="column-title">Contact</h2>
+                    <p>For any questions, comments, or concerns, please contact me at <a href="mailto:timidavid350@yahoo.co.uk">
+                        timidavid350@yahoo.co.uk</a></p>
+                    </div>
+                    <div class="text-column">
+                        <h2 class="column-title">FAQ</h2>
+                        <p> <b>Q: When will the game be released?</b></p>
+                        <p> A: I'm aiming for a release date of 2024, but it could be sooner or later depending on how the game is received. </p>
+                        <p> <b>Q: Will there be a demo?</b></p>
+                        <p> A: Yes! I'm planning on releasing a free demo in the next few months, so you can get a feel for the game before you buy it. </p>
+                        <p> <b>Q: Will there be a console release?</b></p>
+                        <p> A: I'm planning on releasing the game on Steam, but I'm not sure about console releases. Lets finish the game first?</p>
+                        <p> <b>Q: Is the waifu potential real? </b></p>
+                        <p> A: Yes. Husbandos too. Download the demo and find out ;).</p>
+                        <p> <b>Q: Can I date any of the characters? </b></p>
+                        <p> A: Idk, ask them yourself (￣﹃￣)</p>
+                    
+                    </div>
+                </div>
+                
             </section>
         </div>
         <!-- <div class="content">
-            <div class="caption">
-                <div class= "bold">
-                    <b class="white-bold">Welcome to 
-                        <b class="double-bold">HELL </b>
-                    </b>
-                    <b class="double-bold">TENDER,</b>
-                    <br/> 
-                    where the drinks are <b>hot</b> and the customers are hotter 
-                    <em>(literally, they're demons)</em>
-                </div>
-            </div>
-
-            <section class="carousel">
-                <ul class="carousel__list">
-                    <template id="carousel__template">
-                        <li class="carousel__item">
-                            <div class="carousel__image">
-                                <img src="" width=480 height=720>
-                            </div>
-                            <div class="carousel__contents">
-                                <h2 class="slide__title"></h2>
-                            </div>
-                        </li>
-                    </template>
-                </ul>
-            </section>
+            
         <section class="main-section"> 
             <div class="two-row-colum-holder">
                 <div class="text-column">
@@ -206,5 +300,7 @@
 	<script src="main.js"></script>
     <script src="carousel/carousel.js"></script>
     <script src="carousel/createElements.js"></script>
+    <script src="carousel-vertical/carousel-vertical.js"></script>
+    <script src="carousel-vertical/createElements-vertical.js"></script>
   </body>
 </html>
