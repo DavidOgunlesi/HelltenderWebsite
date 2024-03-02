@@ -11,6 +11,12 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+
     <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
         .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -25,11 +31,43 @@
             <div class="logo">
                 <img id="logo" class="logo-img" src="images/game-logo.png" onclick="logoFall()" >
             </div>
-            <img class="background-bar-img" src="images/bar-background.png" >
-            <img class="table" src="images/table.png">
-            <!-- <img class="character" src="images/characters/Larathiel aka Larry.png"> -->
+            <div class="background">
+                <img class="background-bar-img" src="images/bar-background.png" >
+            </div>
+            <div class="trailer">
+                <iframe src="https://www.youtube.com/embed/EZimx2-lmQg?si=MMs-GdmagUmpiBy6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            </iframe>
         </div>
         <div class="content">
+            <div class="caption">
+                <div class= "bold">
+                    <b class="white-bold">Welcome to 
+                        <b class="double-bold">HELL </b>
+                    </b>
+                    <b class="double-bold">TENDER,</b>
+                    <br/> 
+                    where the drinks are <b>hot</b> and the customers are hotter 
+                    <em>(literally, they're demons)</em>
+                </div>
+            </div>
+
+            <section class="carousel">
+                <ul class="carousel__list">
+                    <template id="carousel__template">
+                        <li class="carousel__item">
+                            <div class="carousel__image">
+                                <img src="" width=480 height=720>
+                            </div>
+                            <div class="carousel__contents">
+                                <h2 class="slide__title"></h2>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </section>
+        </div>
+        <!-- <div class="content">
             <div class="caption">
                 <div class= "bold">
                     <b class="white-bold">Welcome to 
@@ -97,13 +135,7 @@
                 <h2 class="column-title">Join the Mailing List to get gifts! Everyone likes gifts!</h2>
                 <img src="images/mailing_list_rewards.png" alt="mailing_list_rewards" width="100%">
                 <form onsubmit="">
-                        <!-- <input type="email" id="email-input" placeholder="Enter your Email"></input> 
-                        <input class="submit-button hidden" id="email-submit" type='submit' value='I want to recieve cool updates!'></input> -->
                         <div class="ml-embedded" data-form="GwEZx5"></div>
-                    <!-- <p> 
-                        Join our mailing list to get updates on the game's progress! You'll be the first to know when the game is released. 
-                        And first to snatch up the best waifus! I mean release week discounts! 
-                    </p> -->
                 </form>
             </div>
             <div class="text-column">
@@ -167,15 +199,9 @@
                 
                 </div>
             </div>
-
-            <!-- <div class="full-text-column">
-                <h2 class="column-title">Contact</h2>
-                <p>For any questions, comments, or concerns, please contact us at <a href="mailto:timidavid350@yahoo.co.uk">
-                    timidavid350@yahoo.co.uk</a></p>
-            </div> -->
             
         </section>
-        </div>
+        </div> -->
     </main>
 	<script src="main.js"></script>
     <script src="carousel/carousel.js"></script>

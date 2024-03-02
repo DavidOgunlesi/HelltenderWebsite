@@ -1,12 +1,21 @@
 :root {
     --height: calc( 60vh - 50px );
     --width: 1050px;
+
+    @media (max-width: 1000px){
+        --height: calc( 40vh - 50px);
+    }
+    
 }
 
 .carousel {
     display: grid;
     transform: translate3d(0,0,0.1px);
     overflow: hidden;
+
+    @media (max-width: 600px){
+        scale: 2;
+    }
 }
 
 .carousel__list {

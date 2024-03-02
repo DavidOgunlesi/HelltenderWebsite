@@ -59,7 +59,7 @@ function createCharacter(element){
 
     
 }
-createCharacter(undefined);
+// createCharacter(undefined);
 
 function logoFall() {
     var element = document.getElementById('logo');
