@@ -143,10 +143,21 @@ main {
   background: linear-gradient(#c40014, #66000a 70%);
   /* padding: 20px 100px; */
   overflow-x: hidden;
+  text-shadow: 2px 2px 5px #c40014;
+}
+
+.dana-img {
+  position: absolute;
+  right: 0;
+  bottom: -1000px;
+  z-index: 0;
+  filter: brightness(70%);
+  width: 30vw;
 }
 
 .caption {
   /* font-family: 'Source Serif Pro'; */
+  position: relative;
   padding: 20px 100px;
   font-size: 3vw;
   z-index: 1;
@@ -205,7 +216,6 @@ main {
 }
 .main-section {
   padding: 0 200px;
-
   @media (max-width: 1000px) {
     padding: 0 50px;
   }
@@ -233,6 +243,7 @@ main {
   flex-basis: 0;
   /* width: 25%; */
   color: white;
+  z-index: 1;
 }
 
 .full-text-column {
